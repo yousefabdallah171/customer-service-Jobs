@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Checkout</title>
+  </head>
+
+  <body>
+    <!-- start header -->
+    <header>
+      <div class="continer">
+        <a href="" class="logo">
+          <img
+            src="https://companieslogo.com/img/orig/CNXC_BIG-3709417e.png?t=1632605259"
+            alt="logo"
+          />
+        </a>
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html">
+                <i
+                  class="show fa-solid fa-delete-left fa-2xl"
+                  style="color: #ff3c78"
+                ></i>
+
+                <i
+                  class="hide fa-solid fa-house fa-2xl"
+                  style="color: #ff3c78"
+                ></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- end header  -->
+    <div class="wrapper checkout-container">
+      <h1>Customer service</h1>
+      <p>Concentrix Form For Egyptyin (For all language)</p>
+
+      <!-- Section to display checkout items -->
+      <div id="checkoutItems"></div>
+
+      <!-- Section to display total cost -->
+      <div id="totalSection">
+        <div id="totalPrice"></div>
+      </div>
+
+      <div id="deliveryForm"></div>
+
+      <h1 class="fill">Please Fill This To Complete The Operation</h1>
+
+      <form
+        id="orderForm"
+        action="https://formspree.io/f/mnnajada"
+        method="POST"
+      >
+        <!-- Hidden inputs for each item in the cart -->
+        <div id="cartItems">
+          <!-- JavaScript will populate this with hidden inputs -->
+        </div>
+        <div class="input-box">
+          <label>
+            Your Name:
+            <input type="text" name="text" />
+          </label>
+        </div>
+        <div class="input-box">
+          <label>
+            Your Email:
+            <input
+              type="email"
+              id="username"
+              name="email"
+              autocomplete="email"
+              required
+            />
+          </label>
+        </div>
+        <div class="input-box">
+          <label>
+            Phone Number nume:
+            <input type="tel" name="phoneNumber" minlength="11" required />
+            <small>Minimum 11 digits</small>
+          </label>
+        </div>
+
+        <div class="input-box">
+          <label>
+            Your Country :
+            <input type="text" name="text" required />
+          </label>
+        </div>
+        <div class="input-box">
+          <label>
+            language You Apply in :
+            <input type="text" name="text" required />
+          </label>
+        </div>
+
+        <div class="input-box">
+          <legend>Done Your military service ?:</legend>
+          <label>
+            <input class="box" type="checkbox" yes name="choice" value="yes" />
+            Yes
+          </label>
+          <label>
+            <input class="box" type="checkbox" name="choice" value="no" />
+            No
+          </label>
+        </div>
+
+        <button type="submit" class="btn">Confirm Order</button>
+      </form>
+    </div>
+  </body>
+</html>
